@@ -16,13 +16,13 @@ def lemmatizeSingleWord(word:str,pos:str):
 def lemmatize(sentence:str):
     # setting up lemmatizer for lemmatization
     lem = WordNetLemmatizer()
+    
     # sentence lemmatization
     tokenizedWords = word_tokenize(sentence)
     lemmatizedWords = [lem.lemmatize(word) for word in tokenizedWords]
    
     return lemmatizedWords
 
-# aString = "My friends loves parties"
 
 
 print("Single word lemmatization: {}".format(lemmatizeSingleWord('better','a')))
